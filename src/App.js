@@ -1,24 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import * as firebaseui from "firebaseui";
+import firebaseConfig from './firebase'
+import firebase from 'firebase'
+import { BrowserRouter, Route } from 'react-router-dom';
+import otp from './Otp';
+import Dashboard from './Dashboard';
 
 function App() {
+
+  
+
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route exact path = "/" component = {otp}></Route>
+      <Route path = "/dashboard" component = {Dashboard}></Route>
     </div>
+    </BrowserRouter>
   );
 }
 
