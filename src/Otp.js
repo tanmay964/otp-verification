@@ -9,9 +9,9 @@ function Otp() {
     useEffect(() => {
         const fbase = firebase.initializeApp(firebaseConfig);
         const uiConfig = {
-          signInSuccessUrl: "http://localhost:3000/dashboard", //This URL is used to return to that page when we got success response for phone authentication.
+          signInSuccessUrl: "https://app.netlify.com/competent-galileo-e3dd26/dashboard", //This URL is used to return to that page when we got success response for phone authentication.
           signInOptions: [firebase.auth.PhoneAuthProvider.PROVIDER_ID],
-          tosUrl: "https://localhost:3000/"
+          tosUrl: "https://app.netlify.com/competent-galileo-e3dd26/"
         };
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
         ui.start("#firebaseui-auth-container", uiConfig);
